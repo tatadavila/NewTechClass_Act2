@@ -16,17 +16,17 @@
 
         <menu>
             <item
-                android:id="@+id/addContact"
+                android:id="@+id/addAccount"
                 app:showAsAction="never"
                 android:icon="@drawable/ic_person_add_black_24dp"
-                android:title="Agregar Contacto" />
+                android:title="Agregar Cuenta Nueva" />
             <item
                 android:id="@+id/orderByTower"
                 app:showAsAction="never"
                 android:icon="@drawable/ic_sort_black_24dp"
                 android:title="Ordenar por Torre" />
             <item
-                android:id="@+id/orderByGroup"
+                android:id="@+id/orderByApartment"
                 app:showAsAction="never"
                 android:icon="@drawable/ic_sort_by_alpha_black_24dp"
                 android:title="Ordernar por Propietario" />
