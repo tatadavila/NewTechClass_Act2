@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="7dp">
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:labelFor="@id/ownerText"
+            android:text="Nombre de Propietario"
+            android:textColor="#C3070606"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/ownerText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:clickable="true"
+            android:ems="10"
+            android:focusable="true"
+            android:hint="Ejemplo: Juan Gomez"
+            android:inputType="textPersonName"
+            android:textColor="#BF706C6C" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="7dp">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:labelFor="@id/towerText"
+            android:text="Torre: "
+            android:textColor="#C3070606"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/towerText"
+            android:layout_width="57dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="27dp"
+            android:autofillHints=""
+            android:ems="10"
+            android:inputType="number|text"
+            android:textColor="#BF706C6C" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+            android:layout_weight="1"
+            android:labelFor="@id/aptText"
+            android:text="Apt: "
+            android:textColor="#C3070606"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/aptText"
+            android:layout_width="57dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="37dp"
+            android:layout_weight="1"
+            android:autofillHints=""
+            android:ems="10"
+            android:inputType="number|text"
+            android:textColor="#BF706C6C" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:labelFor="@id/areaText"
+            android:text="Area: "
+            android:textColor="#C3070606"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/areaText"
+            android:layout_width="57dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="7dp"
+            android:autofillHints=""
+            android:ems="10"
+            android:inputType="text|numberDecimal"
+            android:textColor="#BF706C6C" />
+    </LinearLayout>
+
+</LinearLayout>
