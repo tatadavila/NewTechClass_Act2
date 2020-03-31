@@ -4,10 +4,10 @@ import java.util.ArrayList;
 
 public class MyOwnerAccounts {
 
-    ArrayList<OwnerAccount> myAccountsList;
+    ArrayList<OwnerAccount> accountsList;
 
     public MyOwnerAccounts(ArrayList<OwnerAccount> accountsList) {
-        this.myAccountsList = accountsList;
+        this.accountsList = accountsList;
     }
 
     public MyOwnerAccounts() {
@@ -15,19 +15,19 @@ public class MyOwnerAccounts {
         String[] startingTowers = {"66", "77", "23"};
         String[] startingApartments = {"13", "10", "7"};
         String[] startingAreas = {"266.6", "127.7", "76.7"};
-        this.myAccountsList = new ArrayList<>();
+        this.accountsList = new ArrayList<>();
 
         for (int i=0; i<startingOwners.length; i++) {
             OwnerAccount oc = new OwnerAccount(startingOwners[i], startingTowers[i], startingApartments[i], startingAreas[i]);
-             myAccountsList.add(oc);
+             accountsList.add(oc);
         }
     }
 
-    public ArrayList<OwnerAccount> getMyAccountsList() {
-        return myAccountsList;
+    public ArrayList<OwnerAccount> getAccountsList() {
+        return accountsList;
     }
 
-    public void setMyAccountsList(ArrayList<OwnerAccount> myAccountsList) {
-        this.myAccountsList = myAccountsList;
+    public void setAccountsList(ArrayList<OwnerAccount> accountsList) {
+        this.accountsList = accountsList;
     }
 }

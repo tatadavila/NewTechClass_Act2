@@ -1,5 +1,6 @@
 package com.edu.uac.co.act2;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -24,12 +25,12 @@ public class MainActivity extends AppCompatActivity {
 
         myAccounts = ((MyApplication) this.getApplication()).getMyAccounts();
 
-        adapter = new AccountAdapter(this, myAccounts.myAccountsList);
+        adapter = new AccountAdapter(this, myAccounts.accountsList);
 
         accountLV.setAdapter(adapter);
 
-        /*Bundle incommingMessages = getIntent().getExtras();
-        if(incommingMessages != null){
+        Bundle incommingMessages = getIntent().getExtras();
+        if (incommingMessages != null) {
 
             Intent i = getIntent();
             OwnerAccount oc = i.getParcelableExtra("account");
@@ -37,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
             myAccounts.getAccountsList().add(oc);
 
             adapter.notifyDataSetChanged();
-        }*/
+        }
     }
 
     @Override
@@ -53,9 +54,10 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(this, "Filtro por Apartamento", Toast.LENGTH_SHORT).show();
                 return true;
             case R.id.addAccount:
-            /*Intent i = new Intent(MainActivity.this, NewAccountActivity.class);
-            startActivity(i);*/
-            break;
+                Toast.makeText(this, "Agregar Cuenta Nueva", Toast.LENGTH_SHORT).show();
+                Intent i = new Intent(MainActivity.this, RegistrationActivity.class);
+                startActivity(i);
+                break;
             case R.id.orderByTower:
                 Toast.makeText(this, "Ordenar por Torre", Toast.LENGTH_SHORT).show();
                 return true;
