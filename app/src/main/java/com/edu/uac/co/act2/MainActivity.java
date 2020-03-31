@@ -10,6 +10,11 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
+
 public class MainActivity extends AppCompatActivity {
 
     ListView accountLV;
@@ -60,11 +65,35 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.orderByTower:
                 Toast.makeText(this, "Ordenar por Torre", Toast.LENGTH_SHORT).show();
+                sortByTower();
                 return true;
             case R.id.orderByApartment:
-                Toast.makeText(this, "Ordenar por Apartamento", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Ordenar por Propietario", Toast.LENGTH_SHORT).show();
+                sortbyOwner();
                 return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    public void sortByTower() {
+        Collections.sort(myAccounts.accountsList, new Comparator<OwnerAccount>() {
+            @Override
+            public int compare(OwnerAccount o1, OwnerAccount o2) {
+                return o1.getTower().compareTo(o2.getTower());
+            }
+        });
+
+        adapter.notifyDataSetChanged();
+    }
+
+    public void sortbyOwner() {
+        Collections.sort(myAccounts.accountsList, new Comparator<OwnerAccount>() {
+            @Override
+            public int compare(OwnerAccount o1, OwnerAccount o2) {
+                return o1.getOwner().compareTo(o2.getOwner());
+            }
+        });
+
+        adapter.notifyDataSetChanged();
     }
 }
