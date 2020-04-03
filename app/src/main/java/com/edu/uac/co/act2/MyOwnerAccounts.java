@@ -11,10 +11,10 @@ public class MyOwnerAccounts {
     }
 
     public MyOwnerAccounts() {
-        String[] startingOwners = {"Ada Shelby", "Bobby Cruz", "Catherine Z Jones" };
-        String[] startingTowers = {"66", "77", "23"};
-        String[] startingApartments = {"13", "10", "7"};
-        String[] startingAreas = {"266.6", "127.7", "76.7"};
+        String[] startingOwners = {"Ada Lovelace", "Billy Cruz", "Catherine Z Jones" };
+        String[] startingTowers = {"88", "77", "23"};
+        String[] startingApartments = {"8", "10", "7"};
+        String[] startingAreas = {"357.8", "127.7", "76.7"};
         this.accountsList = new ArrayList<>();
 
         for (int i=0; i<startingOwners.length; i++) {
