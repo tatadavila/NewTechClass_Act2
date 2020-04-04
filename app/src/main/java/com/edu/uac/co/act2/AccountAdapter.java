@@ -13,7 +13,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 
 import java.util.ArrayList;
-import java.util.concurrent.TimeoutException;
+
 
 public class AccountAdapter extends ArrayAdapter<OwnerAccount> {
 
